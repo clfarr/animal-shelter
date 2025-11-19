@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Haven Animal Shelter - Where Every Paw Matters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Patrick+Hand&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hand-drawn banner -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="shelter-name">Hope Haven Animal Shelter</h1>
+                <p class="tagline">A small shelter with big hearts 🐾</p>
+                <p class="location">Serving rural Hope County since 1987</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Pinned urgent notice -->
+    <div class="urgent-banner">
+        <div class="container">
+            <div class="pin pin-left"></div>
+            <div class="pin pin-right"></div>
+            <p>⚠️ <strong>URGENT:</strong> We're running low on dog food and cat litter. Any donations appreciated! 🙏</p>
+        </div>
+    </div>
+
+    <!-- Main navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="nav-btn active" data-section="animals">Meet Our Animals</button>
+            <button class="nav-btn" data-section="volunteer">Volunteer</button>
+            <button class="nav-btn" data-section="donate">Donate</button>
+            <button class="nav-btn" data-section="about">About Us</button>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="container">
+
+        <!-- Animals Section -->
+        <section id="animals" class="content-section active">
+            <div class="cork-board">
+                <h2 class="section-title">Looking for Their Forever Homes</h2>
+                <p class="handwritten-note">These sweethearts are waiting to meet you! All adoption fees: $25 (helps cover basics)</p>
+
+                <div class="polaroid-grid">
+                    <!-- Dogs -->
+                    <div class="polaroid" data-animal="dog">
+                        <div class="photo-frame">
+                            <div class="photo dog-photo" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);">
+                                <div class="placeholder-animal">🐕</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Buddy</h3>
+                            <p>3 yr old Lab mix</p>
+                            <p class="animal-bio">"I love fetch and belly rubs! Great with kids. Been here 4 months."</p>
+                            <span class="tape tape-1"></span>
+                        </div>
+                    </div>
+
+                    <div class="polaroid" data-animal="dog">
+                        <div class="photo-frame">
+                            <div class="photo dog-photo" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <div class="placeholder-animal">🐕‍🦺</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Daisy</h3>
+                            <p>5 yr old Beagle</p>
+                            <p class="animal-bio">"Sweet senior girl. Calm, loves naps. Perfect apartment dog."</p>
+                            <span class="tape tape-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="polaroid" data-animal="dog">
+                        <div class="photo-frame">
+                            <div class="photo dog-photo" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                                <div class="placeholder-animal">🐶</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Max</h3>
+                            <p>2 yr old Terrier mix</p>
+                            <p class="animal-bio">"Energetic boy needs a yard! Knows sit & stay. Loves to play!"</p>
+                            <span class="tape tape-1"></span>
+                        </div>
+                    </div>
+
+                    <!-- Cats -->
+                    <div class="polaroid" data-animal="cat">
+                        <div class="photo-frame">
+                            <div class="photo cat-photo" style="background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);">
+                                <div class="placeholder-animal">🐱</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Whiskers</h3>
+                            <p>1 yr old Tabby</p>
+                            <p class="animal-bio">"Playful & curious! Love to chase anything that moves. Purr machine!"</p>
+                            <span class="tape tape-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="polaroid" data-animal="cat">
+                        <div class="photo-frame">
+                            <div class="photo cat-photo" style="background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);">
+                                <div class="placeholder-animal">😺</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Shadow</h3>
+                            <p>4 yr old Black cat</p>
+                            <p class="animal-bio">"Shy at first but SO affectionate. Lap cat extraordinaire!"</p>
+                            <span class="tape tape-1"></span>
+                        </div>
+                    </div>
+
+                    <div class="polaroid" data-animal="cat">
+                        <div class="photo-frame">
+                            <div class="photo cat-photo" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <div class="placeholder-animal">🐈</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Mittens</h3>
+                            <p>6 mo old Calico</p>
+                            <p class="animal-bio">"Kitten energy! Needs someone to play with. Super sweet!"</p>
+                            <span class="tape tape-2"></span>
+                        </div>
+                    </div>
+
+                    <!-- Small Animals -->
+                    <div class="polaroid" data-animal="small">
+                        <div class="photo-frame">
+                            <div class="photo small-photo" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <div class="placeholder-animal">🐰</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Thumper</h3>
+                            <p>Rabbit - 2 yrs</p>
+                            <p class="animal-bio">"Lop-eared sweetheart. Litter trained! Loves carrots and cuddles."</p>
+                            <span class="tape tape-1"></span>
+                        </div>
+                    </div>
+
+                    <div class="polaroid" data-animal="small">
+                        <div class="photo-frame">
+                            <div class="photo small-photo" style="background: linear-gradient(135deg, #fdeb71 0%, #f8d800 100%);">
+                                <div class="placeholder-animal">🐹</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Peanut & Butter</h3>
+                            <p>Guinea pigs (bonded pair)</p>
+                            <p class="animal-bio">"Must stay together! They wheek for veggies. So chatty & cute!"</p>
+                            <span class="tape tape-2"></span>
+                        </div>
+                    </div>
+
+                    <div class="polaroid" data-animal="small">
+                        <div class="photo-frame">
+                            <div class="photo small-photo" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                                <div class="placeholder-animal">🐭</div>
+                            </div>
+                        </div>
+                        <div class="polaroid-caption">
+                            <h3>Nibbles</h3>
+                            <p>Hamster - 8 months</p>
+                            <p class="animal-bio">"Nocturnal cutie. Loves running on his wheel. Great starter pet!"</p>
+                            <span class="tape tape-1"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sticky-note yellow">
+                    <p><strong>Want to meet them?</strong></p>
+                    <p>Call us: <strong>(555) HOPE-4-PETS</strong></p>
+                    <p>Visit: Tuesday-Saturday, 10am-4pm</p>
+                    <p>No appointment needed - just drop by! 💕</p>
+                </div>
+
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Animals</button>
+                    <button class="filter-btn" data-filter="dog">Dogs</button>
+                    <button class="filter-btn" data-filter="cat">Cats</button>
+                    <button class="filter-btn" data-filter="small">Small Pets</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer Section -->
+        <section id="volunteer" class="content-section">
+            <div class="cork-board">
+                <h2 class="section-title">We Need YOU! 🙋</h2>
+                <p class="handwritten-note">Our volunteers are the heart of Hope Haven. We couldn't do this without you!</p>
+
+                <div class="volunteer-grid">
+                    <div class="volunteer-card">
+                        <div class="card-icon">🐕‍🦺</div>
+                        <h3>Dog Walkers</h3>
+                        <p>Our pups need exercise! Even 30 minutes helps. Morning or afternoon shifts available.</p>
+                        <ul>
+                            <li>No experience needed</li>
+                            <li>We'll show you the ropes</li>
+                            <li>Flexible schedule</li>
+                        </ul>
+                    </div>
+
+                    <div class="volunteer-card">
+                        <div class="card-icon">🧹</div>
+                        <h3>Shelter Help</h3>
+                        <p>Help us keep the shelter clean and animals comfortable. Feed, clean, and give love!</p>
+                        <ul>
+                            <li>Weekend shifts needed most</li>
+                            <li>Great for families</li>
+                            <li>Learn animal care</li>
+                        </ul>
+                    </div>
+
+                    <div class="volunteer-card">
+                        <div class="card-icon">🚗</div>
+                        <h3>Transport Helpers</h3>
+                        <p>Drive animals to vet appointments or help pick up donation supplies.</p>
+                        <ul>
+                            <li>Must have reliable vehicle</li>
+                            <li>Flexible timing</li>
+                            <li>Gas reimbursement available</li>
+                        </ul>
+                    </div>
+
+                    <div class="volunteer-card">
+                        <div class="card-icon">📢</div>
+                        <h3>Social Media</h3>
+                        <p>Help us share our animals online! Take photos, write bios, manage our Facebook.</p>
+                        <ul>
+                            <li>Work from home</li>
+                            <li>Tech-savvy teens welcome</li>
+                            <li>Help animals get seen</li>
+                        </ul>
+                    </div>
+
+                    <div class="volunteer-card">
+                        <div class="card-icon">🎨</div>
+                        <h3>Event Help</h3>
+                        <p>Help at adoption events, bake sales, and fundraisers. We have 4-5 events per year.</p>
+                        <ul>
+                            <li>Meet the community</li>
+                            <li>Fun & rewarding</li>
+                            <li>One-day commitment</li>
+                        </ul>
+                    </div>
+
+                    <div class="volunteer-card">
+                        <div class="card-icon">🏠</div>
+                        <h3>Foster Families</h3>
+                        <p>URGENT NEED! Provide temporary home for animals. We cover food & medical.</p>
+                        <ul>
+                            <li>Short or long-term</li>
+                            <li>We provide supplies</li>
+                            <li>Save lives!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sticky-note blue">
+                    <p><strong>Ready to Help?</strong></p>
+                    <p>Email: <strong>volunteers@hopehaven.org</strong></p>
+                    <p>Or stop by during open hours!</p>
+                    <p class="small-text">Under 16? We have special programs for youth volunteers with parent permission!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donate Section -->
+        <section id="donate" class="content-section">
+            <div class="cork-board">
+                <h2 class="section-title">How You Can Help 💝</h2>
+                <p class="handwritten-note">We're a 100% donation-funded shelter. Every little bit makes a HUGE difference!</p>
+
+                <div class="donation-options">
+                    <div class="donation-card urgent">
+                        <h3>⚠️ URGENT NEEDS</h3>
+                        <div class="needs-list">
+                            <div class="need-item critical">
+                                <span class="need-name">🍖 Dog Food (any brand)</span>
+                                <div class="need-meter">
+                                    <div class="meter-fill" style="width: 15%; background: #e74c3c;"></div>
+                                </div>
+                                <span class="need-status">CRITICAL</span>
+                            </div>
+                            <div class="need-item low">
+                                <span class="need-name">🐱 Cat Litter</span>
+                                <div class="need-meter">
+                                    <div class="meter-fill" style="width: 25%; background: #e67e22;"></div>
+                                </div>
+                                <span class="need-status">LOW</span>
+                            </div>
+                            <div class="need-item low">
+                                <span class="need-name">🧻 Paper Towels</span>
+                                <div class="need-meter">
+                                    <div class="meter-fill" style="width: 30%; background: #f39c12;"></div>
+                                </div>
+                                <span class="need-status">LOW</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="donation-card">
+                        <h3>💰 Monetary Donations</h3>
+                        <p>Help us cover vet bills, utilities, and emergency medical care.</p>
+                        <div class="donation-buttons">
+                            <p><strong>Make checks payable to:</strong><br>Hope Haven Animal Shelter</p>
+                            <p class="address">127 Old Mill Road<br>Hope County, [State] 12345</p>
+                            <p class="small-text">We're a 501(c)(3) - your donation is tax-deductible!</p>
+                        </div>
+                    </div>
+
+                    <div class="donation-card">
+                        <h3>📦 Supply Donations</h3>
+                        <div class="supply-columns">
+                            <div class="supply-col">
+                                <h4>Always Needed:</h4>
+                                <ul>
+                                    <li>Dog & cat food (any brand)</li>
+                                    <li>Cat litter (clumping)</li>
+                                    <li>Cleaning supplies</li>
+                                    <li>Towels & blankets</li>
+                                    <li>Pet toys</li>
+                                    <li>Food/water bowls</li>
+                                </ul>
+                            </div>
+                            <div class="supply-col">
+                                <h4>For Small Animals:</h4>
+                                <ul>
+                                    <li>Timothy hay</li>
+                                    <li>Guinea pig pellets</li>
+                                    <li>Hamster bedding</li>
+                                    <li>Small animal treats</li>
+                                    <li>Rabbit food</li>
+                                    <li>Hide-away houses</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="drop-off"><strong>Drop off during open hours:</strong> Tues-Sat, 10am-4pm</p>
+                    </div>
+
+                    <div class="donation-card">
+                        <h3>🛒 Amazon Wishlist</h3>
+                        <p>Can't drop off in person? Order from our wishlist and items ship directly to us!</p>
+                        <a href="#" class="wishlist-btn">View Our Wishlist →</a>
+                        <p class="small-text">Updated weekly with our current needs</p>
+                    </div>
+                </div>
+
+                <div class="sticky-note pink">
+                    <p><strong>Every donation matters!</strong></p>
+                    <p>Last month, community donations provided:</p>
+                    <ul class="impact-list">
+                        <li>✓ 847 meals for our animals</li>
+                        <li>✓ 12 spay/neuter surgeries</li>
+                        <li>✓ Emergency care for 3 rescues</li>
+                        <li>✓ Warm beds for everyone</li>
+                    </ul>
+                    <p>Thank you for making this possible! 🙏</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="cork-board">
+                <h2 class="section-title">Our Story 📖</h2>
+
+                <div class="about-content">
+                    <div class="story-box">
+                        <p class="handwritten-note large">Founded in 1987 by local farmers who saw too many strays suffering, Hope Haven started in a converted barn. Today, we're still in that same barn (with some improvements!), still run mostly by volunteers, still doing everything we can for every animal that comes through our doors.</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">2,847</div>
+                            <div class="stat-label">Animals adopted since 1987</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15-20</div>
+                            <div class="stat-label">Animals in our care right now</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Donation funded</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">0</div>
+                            <div class="stat-label">Paid staff (all volunteer!)</div>
+                        </div>
+                    </div>
+
+                    <div class="story-box">
+                        <h3>Our Promise</h3>
+                        <p>We may be small, but every animal here gets individual attention, medical care, and all the love we can give. We don't euthanize for space or time - once an animal comes to Hope Haven, we're in it together until they find their forever home.</p>
+                        <p>We know every animal by name. We know their quirks, their favorite treats, their stories. And we can't wait to match them with families who'll love them as much as we do.</p>
+                    </div>
+
+                    <div class="story-box">
+                        <h3>The Reality</h3>
+                        <p>Hope County is one of the poorest counties in the state. We don't have a big budget or fancy facilities. What we have is:</p>
+                        <ul>
+                            <li>A community that cares</li>
+                            <li>Volunteers who show up rain or shine</li>
+                            <li>A local vet who gives us a discount</li>
+                            <li>Neighbors who donate what they can</li>
+                            <li>Hearts bigger than our bank account</li>
+                        </ul>
+                        <p>Some months are harder than others. But we've never turned away an animal in need, and we don't plan to start.</p>
+                    </div>
+
+                    <div class="team-section">
+                        <h3>Meet Some of Our Volunteers</h3>
+                        <div class="volunteer-notes">
+                            <div class="volunteer-note">
+                                <p><strong>Martha (Shelter Director)</strong></p>
+                                <p>"Been here since '92. These animals are my babies. All of 'em."</p>
+                            </div>
+                            <div class="volunteer-note">
+                                <p><strong>Tom (Handyman & Dog Walker)</strong></p>
+                                <p>"Retired last year. Best decision was spending my time here!"</p>
+                            </div>
+                            <div class="volunteer-note">
+                                <p><strong>Sophie (High School Student)</strong></p>
+                                <p>"I come after school every day. The cats know my schedule! 😺"</p>
+                            </div>
+                            <div class="volunteer-note">
+                                <p><strong>The Johnson Family</strong></p>
+                                <p>"Sunday mornings are our family volunteer time. Kids love it!"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sticky-note green">
+                        <p><strong>Want to Visit?</strong></p>
+                        <p>127 Old Mill Road, Hope County</p>
+                        <p>Tuesday-Saturday: 10am-4pm</p>
+                        <p>Phone: (555) HOPE-4-PETS</p>
+                        <p>Email: info@hopehaven.org</p>
+                        <br>
+                        <p class="small-text">Look for the red barn with the paw print on the door. You can't miss it! 🐾</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Hope Haven Animal Shelter</strong> - A 501(c)(3) nonprofit organization</p>
+                <p>127 Old Mill Road, Hope County | (555) HOPE-4-PETS</p>
+                <p>Open: Tuesday-Saturday, 10am-4pm</p>
+                <p class="footer-heart">Made with ❤️ by volunteers who care</p>
+                <p class="small-text">Website lovingly maintained by our teen volunteer tech team!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

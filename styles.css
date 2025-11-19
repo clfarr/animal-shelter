@@ -1,0 +1,810 @@
+/* Hope Haven Animal Shelter - Grassroots Style */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background: linear-gradient(180deg, #f4e4c1 0%, #e8d5b5 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.site-header {
+    background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #1d3557;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-header::before {
+    content: '🐾';
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.1;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-20deg);
+}
+
+.site-header::after {
+    content: '🐾';
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.1;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+}
+
+.shelter-name {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.tagline {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
+    color: #f1faee;
+    margin: 10px 0;
+}
+
+.location {
+    color: #e0e0e0;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Urgent Banner */
+.urgent-banner {
+    background: #fff3cd;
+    border: 3px dashed #ff6b6b;
+    margin: 20px auto;
+    max-width: 900px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.urgent-banner .container {
+    padding: 15px 20px;
+}
+
+.urgent-banner p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #c92a2a;
+    font-weight: bold;
+}
+
+/* Push pins */
+.pin {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #e74c3c 0%, #c0392b 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: -8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 -2px 3px rgba(0,0,0,0.2);
+}
+
+.pin::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.pin-left { left: 20px; }
+.pin-right { right: 20px; }
+
+/* Navigation */
+.main-nav {
+    background: #f1f3f4;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+.nav-btn {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    background: white;
+    border: 2px solid #457b9d;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-btn:hover {
+    background: #e8f4f8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.nav-btn.active {
+    background: #457b9d;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 30px 20px;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cork Board Effect */
+.cork-board {
+    background:
+        repeating-linear-gradient(90deg, #c19a6b 0px, #c19a6b 2px, transparent 2px, transparent 10px),
+        repeating-linear-gradient(0deg, #c19a6b 0px, #c19a6b 2px, transparent 2px, transparent 10px),
+        linear-gradient(135deg, #d4a574 0%, #c19a6b 50%, #b8956a 100%);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3),
+        inset 0 0 100px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Caveat', cursive;
+    font-size: 3em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+}
+
+.handwritten-note {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.4em;
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 30px;
+    background: rgba(255,255,255,0.3);
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+.handwritten-note.large {
+    font-size: 1.6em;
+    line-height: 1.8;
+    background: rgba(255,255,255,0.5);
+    padding: 25px;
+}
+
+/* Polaroid Cards */
+.polaroid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    margin: 40px 0;
+    justify-items: center;
+}
+
+.polaroid {
+    background: white;
+    padding: 15px;
+    padding-bottom: 80px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* Rotate polaroids slightly for authentic look */
+.polaroid:nth-child(3n+1) { transform: rotate(-2deg); }
+.polaroid:nth-child(3n+2) { transform: rotate(1deg); }
+.polaroid:nth-child(3n+3) { transform: rotate(-1deg); }
+
+.photo-frame {
+    width: 100%;
+    aspect-ratio: 1;
+    background: #f0f0f0;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-animal {
+    font-size: 120px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+.polaroid-caption h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.polaroid-caption p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.animal-bio {
+    font-family: 'Indie Flower', cursive;
+    font-size: 0.95em;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* Tape effect on polaroids */
+.tape {
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    background: rgba(255, 255, 200, 0.6);
+    top: -8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.tape-1 {
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.tape-2 {
+    right: 20px;
+    transform: rotate(5deg);
+}
+
+/* Sticky Notes */
+.sticky-note {
+    background: #feff9c;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.2em;
+    transform: rotate(-1deg);
+}
+
+.sticky-note::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 20px;
+    background: rgba(200, 200, 150, 0.5);
+    border-radius: 2px;
+}
+
+.sticky-note.yellow { background: #feff9c; }
+.sticky-note.blue { background: #aecbfa; }
+.sticky-note.pink { background: #ffccd5; }
+.sticky-note.green { background: #ccff90; }
+
+.sticky-note p {
+    margin: 10px 0;
+    color: #2c3e50;
+}
+
+.sticky-note strong {
+    font-size: 1.1em;
+    color: #1a202c;
+}
+
+.small-text {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.filter-btn {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #457b9d;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-btn:hover {
+    background: #e8f4f8;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: #457b9d;
+    color: white;
+}
+
+/* Volunteer Cards */
+.volunteer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.volunteer-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid #457b9d;
+    transition: all 0.3s ease;
+}
+
+.volunteer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.volunteer-card h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.volunteer-card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.volunteer-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.volunteer-card ul li {
+    padding: 5px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #666;
+}
+
+.volunteer-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #457b9d;
+    font-weight: bold;
+}
+
+/* Donation Section */
+.donation-options {
+    display: grid;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.donation-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.donation-card.urgent {
+    border: 3px solid #e74c3c;
+    background: #fff5f5;
+}
+
+.donation-card h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.needs-list {
+    margin: 20px 0;
+}
+
+.need-item {
+    margin: 15px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.need-name {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.need-meter {
+    width: 100%;
+    height: 25px;
+    background: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 8px 0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meter-fill {
+    height: 100%;
+    transition: width 0.5s ease;
+    border-radius: 15px;
+}
+
+.need-status {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.need-item.critical .need-status {
+    background: #e74c3c;
+    color: white;
+}
+
+.need-item.low .need-status {
+    background: #f39c12;
+    color: white;
+}
+
+.supply-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.supply-col h4 {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #457b9d;
+}
+
+.supply-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.supply-col ul li {
+    padding: 5px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.supply-col ul li::before {
+    content: '•';
+    position: absolute;
+    left: 10px;
+    color: #457b9d;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.address {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #457b9d;
+    margin: 15px 0;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.2em;
+}
+
+.wishlist-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff9900;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 15px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.wishlist-btn:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.drop-off {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f4f8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.impact-list {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.impact-list li {
+    padding: 5px 0;
+    color: #2c3e50;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    gap: 25px;
+}
+
+.story-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.story-box h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2em;
+    color: #457b9d;
+    margin-bottom: 15px;
+}
+
+.story-box p {
+    margin: 15px 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+.story-box ul {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+.story-box ul li {
+    margin: 8px 0;
+    color: #555;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 5px solid #457b9d;
+}
+
+.stat-number {
+    font-family: 'Caveat', cursive;
+    font-size: 3.5em;
+    color: #457b9d;
+    font-weight: bold;
+}
+
+.stat-label {
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.team-section h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.volunteer-notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.volunteer-note {
+    background: #feff9c;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transform: rotate(-1deg);
+    font-family: 'Indie Flower', cursive;
+}
+
+.volunteer-note:nth-child(even) {
+    background: #aecbfa;
+    transform: rotate(1deg);
+}
+
+.volunteer-note p {
+    margin: 8px 0;
+    color: #2c3e50;
+}
+
+.volunteer-note strong {
+    font-size: 1.2em;
+}
+
+/* Footer */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    opacity: 0.9;
+}
+
+.footer-heart {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shelter-name {
+        font-size: 2.5em;
+    }
+
+    .tagline {
+        font-size: 1.2em;
+    }
+
+    .section-title {
+        font-size: 2.2em;
+    }
+
+    .polaroid-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .volunteer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav-btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .cork-board {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shelter-name {
+        font-size: 2em;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2.5em;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-nav,
+    .filter-buttons,
+    .urgent-banner {
+        display: none;
+    }
+
+    .content-section {
+        display: block !important;
+        page-break-before: always;
+    }
+
+    .polaroid,
+    .volunteer-card,
+    .donation-card {
+        page-break-inside: avoid;
+    }
+}
