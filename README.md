@@ -78,14 +78,29 @@ animal-shelter/
 
 Simply open `index.html` in a web browser. No build process or server required!
 
+## Adding Real Animal Photos 📸
+
+The website is ready for real animal photos! See **[HOW-TO-ADD-PHOTOS.md](HOW-TO-ADD-PHOTOS.md)** for detailed instructions.
+
+**Quick version:**
+1. Add your animal photos to these folders:
+   - `images/dogs/` (buddy.jpg, daisy.jpg, max.jpg)
+   - `images/cats/` (whiskers.jpg, shadow.jpg, mittens.jpg)
+   - `images/small-animals/` (thumper.jpg, peanut-butter.jpg, nibbles.jpg)
+2. Photos should be square (600x600px or larger)
+3. Use JPG format
+4. Refresh the browser - done!
+
+The polaroid frames will automatically display your photos with a nice zoom effect on hover.
+
 ## Customization Guide
 
 ### Adding New Animals
 1. Copy a polaroid div in the HTML
 2. Update the `data-animal` attribute (dog/cat/small)
-3. Change the background gradient color
-4. Update name, age, and bio
-5. Change emoji placeholder
+3. Add image file to appropriate images folder
+4. Update image src, name, age, and bio
+5. Add the photo file with matching name
 
 ### Updating Urgent Needs
 1. Find the `.needs-list` section in HTML
