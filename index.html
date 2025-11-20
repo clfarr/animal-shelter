@@ -50,13 +50,24 @@
                 <h2 class="section-title">Meet Our Adoptable Animals</h2>
                 <p class="handwritten-note">Visit us to meet these wonderful animals looking for homes!</p>
 
-                <div class="petfinder-link-box">
-                    <h3>🔍 View All Available Animals</h3>
-                    <p>We keep our adoptable animals updated on Petfinder with photos, descriptions, and more details!</p>
-                    <a href="https://www.petfinder.com/search/pets-for-adoption/?shelter_id%5B0%5D=CA1807" target="_blank" class="petfinder-btn">
-                        See Our Animals on Petfinder →
-                    </a>
-                    <p class="small-text">Updated regularly with new arrivals</p>
+                <div class="petfinder-widget-container">
+                    <h3>🐾 Our Adoptable Animals</h3>
+                    <p class="widget-intro">Browse our current animals looking for homes! Click on any pet to learn more.</p>
+
+                    <pet-scroller
+                        type='[]'
+                        age='[]'
+                        limit="24"
+                        hidebreed
+                        status="adoptable"
+                        petlisttitle="Trinity County Animal Shelter"
+                        organization="CA1807"
+                        apibase="https://api.petfinder.com"
+                        petfinderurl="https://www.petfinder.com"
+                        accesstoken="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJtd1NmUDQ1SEpPckFSS0RkVGM1M3JGSjNHVTJIdnk0SUxVSGR5Y3NnNGpURzRCVHIzdCIsImp0aSI6IjlGeFFxR2djQ2ZlR28zZFM2SFVwOHFzYnh1ZDJQbDlkN2dzaVhoQW8iLCJpYXQiOjE3NjM2MDY4MDEsIm5iZiI6MTc2MzYwNjgwMSwiZXhwIjo0OTE5MjgwNDAxLCJzdWIiOiIyMDM3MTM2NCIsInNjb3BlcyI6W119.GUIvoqeiA1GSnEOlH89ti3Ven90dYqdqcriO2BG5f03Ad2G3LcldbIOEouPnOEzHWgRUEJdtY44aQQxatkLgEAlqzAYjNku96wYIcz6xK8V6cGaIJBZKuqLv3yWpL-Lub5elrmaTNGjSiDm7Exbzhsk8TMkq4ji7EndfLR67eFyUxV_PfRuHFIKWrEqRMYpWKB66xG2YSlT-2hAD5C8LhmE0Yv-vwLhR_yvB9PiCsn2U_aoWRBTKy03IIV4EIReCYlodwUkdgzuvLqz4ZX7jS7J0QZLWzQXal_RMRQ0gn7P0NYrqCkjj_tjiWn-x5ZtFVapTduAJplipU204xmc0KQ">
+                    </pet-scroller>
+
+                    <p class="widget-footer"><a href="https://www.petfinder.com/search/pets-for-adoption/?shelter_id%5B0%5D=CA1807" target="_blank">View full list on Petfinder →</a></p>
                 </div>
 
                 <div class="adoption-info-grid">
@@ -441,6 +452,7 @@
         </div>
     </footer>
 
+    <script src="https://www.petfinder.com/assets/widgets/scripts/main-widgets-web.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

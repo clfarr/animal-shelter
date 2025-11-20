@@ -734,50 +734,49 @@ main {
     font-size: 1.2em;
 }
 
-/* Petfinder Integration */
-.petfinder-link-box {
+/* Petfinder Widget Integration */
+.petfinder-widget-container {
     background: white;
     padding: 30px;
     border-radius: 10px;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     margin: 30px auto;
-    max-width: 600px;
     border: 3px solid #457b9d;
 }
 
-.petfinder-link-box h3 {
+.petfinder-widget-container h3 {
     font-family: 'Caveat', cursive;
     font-size: 2.2em;
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.petfinder-link-box p {
-    margin: 15px 0;
+.widget-intro {
+    text-align: center;
+    margin: 10px 0 20px 0;
     font-size: 1.1em;
     color: #555;
 }
 
-.petfinder-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #457b9d;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: 20px 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    font-family: 'Patrick Hand', cursive;
+.widget-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #457b9d;
 }
 
-.petfinder-btn:hover {
-    background: #1d3557;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+.widget-footer a {
+    color: #457b9d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.widget-footer a:hover {
+    color: #1d3557;
+    text-decoration: underline;
 }
 
 /* Adoption Info Cards */
