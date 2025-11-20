@@ -56,7 +56,7 @@ This website embraces a grassroots, authentic design that reflects the caring, c
 - **Responsive Design** - Works on mobile, tablet, and desktop
 - **Accessibility Features** - Keyboard navigation, semantic HTML
 - **Performance** - Fast loading, minimal dependencies
-- **Petfinder Integration** - Links to shelter's Petfinder page (CA1094)
+- **Petfinder Integration** - Links to shelter's Petfinder page (CA1807)
 
 ### Google Fonts Used
 - Caveat (headings)
@@ -107,11 +107,11 @@ The shelter hours appear in multiple places:
 - Update in header sticky note, footer, and About section
 
 ### Petfinder Integration
-Currently links to: `https://www.petfinder.com/search/?shelter_id=CA1094`
+Currently links to: `https://www.petfinder.com/search/pets-for-adoption/?shelter_id%5B0%5D=CA1807`
 
 To update:
-1. Find "CA1094" in index.html
-2. Replace with your shelter's Petfinder ID
+1. Find "CA1807" in index.html
+2. Replace with your shelter's Petfinder ID if different
 3. Located on lines 55 and 335
 
 ## Browser Support
