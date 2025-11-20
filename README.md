@@ -1,54 +1,62 @@
-# 🐾 Hope Haven Animal Shelter Website
+# 🐾 Trinity County Animal Shelter Website
 
-A heartfelt, grassroots-style website for a small county animal shelter that runs on love and donations.
+A warm, community-focused website for Trinity County Animal Shelter in Weaverville, California.
 
-## About Hope Haven
+## About Trinity County Animal Shelter
 
-Hope Haven Animal Shelter is a small, volunteer-run shelter serving rural Hope County since 1987. This website reflects their authentic, community-focused mission - helping cats, dogs, and small animals find forever homes while relying on public support for food, supplies, and volunteers.
+**Location:** 570 Mountain View St, Weaverville, CA 96093
+**Phone:** (530) 623-1370
+**Hours:** Thursday-Saturday & Tuesday, 12-4 PM
+
+Trinity County Animal Shelter serves the beautiful Trinity County region in Northern California, providing care and shelter for homeless and abandoned animals while working to find them loving forever homes.
 
 ## Design Philosophy
 
-This website breaks away from the typical polished, corporate shelter design. Instead, it embraces:
+This website embraces a grassroots, authentic design that reflects the caring, community-focused nature of a small county animal shelter:
 
 - **🎨 Bulletin Board Aesthetic**: Cork board backgrounds with pinned elements
-- **📸 Polaroid-Style Cards**: Handmade feel for animal profiles
-- **✍️ Handwritten Fonts**: Personal, warm typography
+- **✍️ Handwritten Fonts**: Personal, warm typography (Caveat, Patrick Hand, Indie Flower)
 - **📝 Sticky Notes**: Important info presented like community notices
-- **💝 Grassroots Feel**: Authentic representation of a small, resource-limited shelter
+- **💝 Grassroots Feel**: Authentic representation of a community-supported shelter
 
 ## Features
 
 ### 🐕 Meet Our Animals
-- Interactive polaroid-style cards for each adoptable animal
-- Filter by type: Dogs, Cats, or Small Animals (rabbits, guinea pigs, hamsters)
-- Rotating, slightly-angled cards for an authentic bulletin board feel
-- Hover effects to highlight individual animals
+- Direct link to Petfinder listings
+- Adoption process information
+- Contact details with hours and location
+- Easy-to-find visit information
 
 ### 🙋 Volunteer Section
-- Six volunteer opportunity categories
-- Clear descriptions of what's needed
-- Flexible options for different schedules and abilities
-- Foster family urgent callout
+- Six volunteer opportunity categories:
+  - Dog Walkers
+  - Shelter Help
+  - Transport Helpers
+  - Social Media
+  - Event Help
+  - Foster Families (urgent need highlighted)
+- Clear descriptions and flexible options
 
 ### 💰 Donate Section
 - Visual "urgent needs" meter showing current supply levels
-- Multiple donation options (monetary, supplies, Amazon wishlist)
-- Impact statistics showing what donations accomplish
-- Supply drop-off information
+- Monetary donation information
+- Supply donation lists (general and small animals)
+- Amazon wishlist integration option
+- Drop-off information with correct hours
 
 ### 📖 About Us
-- Authentic shelter story since 1987
-- Statistics showcasing their impact
-- Meet the volunteer team
-- Honest about their challenges and community-focused approach
+- Mission statement
+- Information about Trinity County
+- Services provided
+- Contact and location details
 
 ## Technical Details
 
-- **Pure HTML/CSS/JavaScript** - No frameworks, keeping it simple and lightweight
+- **Pure HTML/CSS/JavaScript** - No frameworks, lightweight and fast
 - **Responsive Design** - Works on mobile, tablet, and desktop
 - **Accessibility Features** - Keyboard navigation, semantic HTML
 - **Performance** - Fast loading, minimal dependencies
-- **Print-Friendly** - Formatted for printing adoption flyers
+- **Petfinder Integration** - Links to shelter's Petfinder page (CA1094)
 
 ### Google Fonts Used
 - Caveat (headings)
@@ -62,67 +70,49 @@ animal-shelter/
 ├── index.html          # Main HTML file
 ├── styles.css          # All styling with cork board theme
 ├── script.js           # Interactive features
+├── images/             # Folder for photos
+│   ├── dogs/
+│   ├── cats/
+│   └── small-animals/
+├── HOW-TO-ADD-PHOTOS.md
 └── README.md           # This file
 ```
 
 ## Interactive Features
 
 1. **Section Navigation**: Smooth transitions between Animals, Volunteer, Donate, and About sections
-2. **Animal Filtering**: Click filters to show only dogs, cats, or small animals
+2. **Hover Effects**: Cards lift and interact on hover
 3. **Animated Meters**: Donation need meters animate when scrolled into view
-4. **Hover Effects**: Cards lift and straighten on hover
-5. **Easter Egg**: Click the shelter name 5 times for a surprise!
-6. **Parallax Header**: Subtle scroll effect on the header
+4. **Easter Egg**: Click the shelter name 5 times for a surprise!
+5. **Parallax Header**: Subtle scroll effect on the header
+6. **Responsive**: Works beautifully on all devices
 
-## Usage
-
-Simply open `index.html` in a web browser. No build process or server required!
-
-## Adding Real Animal Photos 📸
-
-The website is ready for real animal photos! See **[HOW-TO-ADD-PHOTOS.md](HOW-TO-ADD-PHOTOS.md)** for detailed instructions.
-
-**Quick version:**
-1. Add your animal photos to these folders:
-   - `images/dogs/` (buddy.jpg, daisy.jpg, max.jpg)
-   - `images/cats/` (whiskers.jpg, shadow.jpg, mittens.jpg)
-   - `images/small-animals/` (thumper.jpg, peanut-butter.jpg, nibbles.jpg)
-2. Photos should be square (600x600px or larger)
-3. Use JPG format
-4. Refresh the browser - done!
-
-The polaroid frames will automatically display your photos with a nice zoom effect on hover.
-
-## Customization Guide
-
-### Adding New Animals
-1. Copy a polaroid div in the HTML
-2. Update the `data-animal` attribute (dog/cat/small)
-3. Add image file to appropriate images folder
-4. Update image src, name, age, and bio
-5. Add the photo file with matching name
+## Customization
 
 ### Updating Urgent Needs
-1. Find the `.needs-list` section in HTML
-2. Adjust the meter width in the inline style
+1. Find the `.needs-list` section in HTML (around line 187)
+2. Adjust the meter width in the inline style (currently 15%, 25%, 30%)
 3. Update the status class (critical/low/ok)
+4. Change the item names as needed
 
-### Changing Colors
-Main colors are defined in the CSS:
-- Primary Blue: `#457b9d`
-- Dark Background: `#2c3e50`
-- Cork Board: `#c19a6b`
-- Urgent Red: `#e74c3c`
+### Updating Hours
+The shelter hours appear in multiple places:
+- Urgent banner (line 29)
+- Animals section info cards (line 72-74)
+- Footer (line 333)
 
-## Why This Design?
+### Changing Contact Info
+- Phone number: (530) 623-1370
+- Address: 570 Mountain View St, Weaverville, CA 96093
+- Update in header sticky note, footer, and About section
 
-Most shelter websites look polished and professional, which is great. But Hope Haven isn't a big organization with a large budget. They're a small, scrappy shelter where volunteers show up every day to care for animals with whatever resources the community can provide.
+### Petfinder Integration
+Currently links to: `https://www.petfinder.com/search/?shelter_id=CA1094`
 
-This design reflects that reality:
-- It feels handmade because it IS largely handmade by volunteers
-- It's warm and personal because the volunteers know every animal by name
-- It's urgent and honest about needs because they really do need help
-- It's community-focused because that's what keeps them running
+To update:
+1. Find "CA1094" in index.html
+2. Replace with your shelter's Petfinder ID
+3. Located on lines 55 and 335
 
 ## Browser Support
 
@@ -132,19 +122,31 @@ Works on all modern browsers:
 - Safari (latest)
 - Mobile browsers
 
+## Why This Design?
+
+Trinity County is a beautiful, rural mountain county with a close-knit community. This design reflects that reality:
+- It's warm and personal
+- It's honest about needs
+- It's community-focused
+- It makes information easy to find
+- It integrates with their existing Petfinder presence
+
+## Deployment
+
+This is a static website that can be hosted anywhere:
+- GitHub Pages (free)
+- Netlify (free)
+- Vercel (free)
+- Any web hosting service
+
+Simply upload all files to your hosting provider.
+
 ## License
 
-Free to use and modify. If you're a small shelter looking to use this template, please do! That's exactly what it's for.
-
-## Contact
-
-**Hope Haven Animal Shelter**
-127 Old Mill Road, Hope County
-Phone: (555) HOPE-4-PETS
-Email: info@hopehaven.org
-
-Open: Tuesday-Saturday, 10am-4pm
+Created with care for Trinity County Animal Shelter. Free to use and modify for animal shelter purposes.
 
 ---
 
-*Made with ❤️ for animals who deserve loving homes*
+*Caring for animals in the heart of Northern California's Trinity Alps* 🐾
+
+**Note:** This website was created as a presentation/proposal for Trinity County Animal Shelter. All information is based on publicly available data and should be verified with the shelter before going live.
